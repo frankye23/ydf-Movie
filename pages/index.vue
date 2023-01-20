@@ -4,13 +4,13 @@
     <div class="text-center hero-content text-neutral-content">
       <div class="max-w-md">
         <h1 class="mb-5 text-5xl font-bold">
-          Hello there
+          Hello There
         </h1>
         <p class="mb-5">
-          Just A Simple share page
+          Just A Simple sharing page, i will recommend some movies and dramas here
         </p>
         <button class="btn btn-primary" @click="goto">
-          Get Started
+          <NuxtLink to="/movie">Get Started</NuxtLink>
         </button>
       </div>
     </div>
@@ -26,10 +26,6 @@
       rel: 'icon', type: 'image/png', href: '/nuxt.png',
     },
   ],
-
-  // const goto = () => {
-  //   $router.push('/movie')
-  // }
 })
 </script>
 
