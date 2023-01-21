@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-  const imgUrl = './public/img/background.jpg'
+  const imgUrl = '/img/background.jpg'
   useHead({
   title: 'Welcome',
   link: [
@@ -31,7 +31,7 @@
 
 <style scoped>
   .hero-container {
-    background-image: url('./public/img/background.jpg');
+    background-image: url('/img/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
