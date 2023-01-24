@@ -9,11 +9,12 @@
       <div class="coverflow-example">
         <swiper
           class="swiper"
+          @swiper="setSwiperRef"
           :modules="modules"
           :pagination="true"
           :effect="'coverflow'"
           :grab-cursor="true"
-          :centered-slides="true"
+          :centered-slides="false"
           :slides-per-view="'auto'"
           :coverflow-effect="{
             rotate: 50,
@@ -23,13 +24,14 @@
             slideShadows: true
           }"
         >
-          <swiper-slide class="slide" v-for="index in 8" :key="index">
+          <swiper-slide class="slide" v-for="index in 8" :key="index" :virtual-index="4">
             <img src="../public/img/Quiet.jpg" />
           </swiper-slide>
         </swiper>
       </div>
 
       <Collection />
+      <Drama />
     </div>            
   </NuxtLayout>
 </template>
@@ -50,7 +52,13 @@
       SwiperSlide
     },
     setup() {
+      let swiperRef
+      const setSwiperRef = (swiper) => {
+        swiperRef = swiper
+      }
       return {
+        swiperRef,
+        setSwiperRef,
         modules: [Pagination, EffectCoverflow]
       }
     }

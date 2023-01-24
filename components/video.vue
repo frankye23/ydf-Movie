@@ -53,7 +53,7 @@
 <style scoped>
 .video-player {
     /* background-color: $black; */
-    width: 100%;
+    width: 50%;
   }
 </style>
   
